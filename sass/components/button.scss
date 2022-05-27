@@ -1,0 +1,26 @@
+.btn-primary{
+  padding: 1em 0;
+  border: none;
+  border-radius: .5em;
+  font-weight: 700;
+  display: grid;
+  column-gap: .7em;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: auto auto;
+  color: $white;
+  background-color: $orange;
+  img{
+    filter: brightness(0) invert(1);
+  }
+}
+
+@media (min-width: 1200px){
+  .btn-primary--add{
+    cursor: pointer;
+    transition: opacity .5s;
+    &:hover{
+      opacity: .6;
+    }
+  }
+}

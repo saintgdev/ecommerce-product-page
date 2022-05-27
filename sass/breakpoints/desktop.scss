@@ -1,0 +1,12 @@
+@media (min-width: 1200px) {
+  .icon-menu{
+    display: none;
+  }
+  .header-nav{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+  }
+}

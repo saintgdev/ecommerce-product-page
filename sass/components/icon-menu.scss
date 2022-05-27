@@ -1,0 +1,28 @@
+.icon-menu{
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 1200;
+  &__open,
+  &__close{
+    pointer-events: none;
+    transition: opacity .7s;
+  }
+  &__close{
+    opacity: 0;
+    position: absolute;
+  }
+  &--show{
+    .icon-menu__close{
+      opacity: 1;
+    }
+    .icon-menu__open{
+      opacity: 0;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .icon-menu{
+    display: none;
+  }
+}

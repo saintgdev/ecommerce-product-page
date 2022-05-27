@@ -1,0 +1,46 @@
+.header-user{
+  display: grid;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 1.2em;
+  grid-template-columns: auto auto;
+  
+}
+.header-avatar{
+  width: $avatar-size;
+  height: $avatar-size;
+  position: relative;
+  &::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    outline: .15em solid $orange;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+}
+
+
+// Desktop
+@media (min-width: 1200px) {
+  .header-avatar{
+      width: calc($avatar-size + .6em);
+      height: calc($avatar-size + .6em);
+      cursor: pointer;
+      &:hover {
+        &::before{
+          opacity: 1;
+
+        }
+      }
+  }
+}

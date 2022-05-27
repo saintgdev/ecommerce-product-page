@@ -1,0 +1,16 @@
+.product{
+  margin-top: $header-height;
+}
+
+// Desktop
+@media (min-width: 1200px) {
+  .product{
+    width: 80%;
+    margin: calc($header-height + 3em) auto 0;
+    padding: 2.5em;
+    display: grid;
+    align-items: center;
+    column-gap: 5em;
+    grid-template-columns: 40% 1fr;
+  }
+}

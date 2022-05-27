@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <!-- Icon Menu -->
+    <div id="icon-menu" class="icon-menu">
+      <img src="images/icon-menu.svg" alt="icon-menu" class="icon-menu__open">
+      <img src="images/icon-close.svg" alt="icon-menu" class="icon-menu__close">
+    </div>
+
+    <img src="images/logo.svg" alt="logo" class="header__logo">
+    <!-- Navigation section -->
+    <nav class="header-nav" id="header-nav">
+      <ul class="header-menu">
+        <li class="header-menu__item">
+          <a href="#" class="header-menu__link">Collections</a>
+        </li>
+        <li class="header-menu__item">
+          <a href="#" class="header-menu__link">Men</a>
+        </li>
+        <li class="header-menu__item">
+          <a href="#" class="header-menu__link">Women</a>
+        </li>
+        <li class="header-menu__item">
+          <a href="#" class="header-menu__link">About</a>
+        </li>
+        <li class="header-menu__item">
+          <a href="#" class="header-menu__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <!--  -->
+    <div class="header-user">
+      <div class="icon-cart" id="icon-cart"> <!-- aplicar clase para activar-->
+        <span class="icon-cart__amount">3</span>
+        <img src="images/icon-cart.svg" alt="icon-cart" class="icon-cart__img">
+      </div>
+      <div class="header-avatar">
+        <img src="images/image-avatar.png" alt="image-user" class="header-avatar__img">
+      </div>
+    </div>
+    <div class="cart-checkout" id="cart-checkout">
+      <p class="cart-checkout__header">Cart</p>
+      <p class="cart-checkout__empty" id="cart-empty">You cart is empty.</p>
+      <div class="cart-checkout__action" id="cart-not-empty">
+        <div class="cart-item">
+          <img src="images/image-product-1-thumbnail.jpg" alt="image-product-1" class="cart-item__img">
+          <p class="cart-item__title">Autumn Limited Edition Sneakers</p>
+          <p class="cart-item__price" id="checkout-price"></b></p>
+          <img src="images/icon-delete.svg" alt="icon-delete" class="cart-item__icon" id="remove-item">
+        </div>
+        <button class="btn-primary">Checkout</button>
+      </div>
+    </div>
+    <!-- Line visible on desktop -->
+    <div class="header__line"></div>
+    <div id="dark-overlay" class="header__overlay"></div>
+  </header>
+
+
+  <section class="product">
+    <article class="product-preview">
+      <div class="product-slider">
+        <div class="product-slider__slide" id="slides-container">
+          <img src="images/image-product-1.jpg" alt="image-product-1">
+          <img src="images/image-product-2.jpg" alt="image-product-2">
+          <img src="images/image-product-3.jpg" alt="image-product-3">
+          <img src="images/image-product-4.jpg" alt="image-product-4">
+        </div>
+        <div class="product-slider__btn product-slider__btn--prev" id="slide-prev">
+          <img src="images/icon-previous.svg" alt="icon-previous">
+        </div>
+        <div class="product-slider__btn product-slider__btn--next" id="slide-next">
+          <img src="images/icon-next.svg" alt="icon-next">
+        </div>
+      </div>
+
+      <div class="product-view">
+        <img src="images/image-product-1.jpg" alt="product-view" id="product-view__img" class="product-view__img">
+        <div class="product-thumbnails">
+          <div class="product-thumbnails__cover product-thumbnails__cover--actived">
+            <img src="images/image-product-1-thumbnail.jpg" alt="image-product-1" class="product-thumbnails__item product-thumbnails__item--actived">
+          </div>
+          <div class="product-thumbnails__cover">
+            <img src="images/image-product-2-thumbnail.jpg" alt="image-product-2" class="product-thumbnails__item">
+          </div>
+          <div class="product-thumbnails__cover">
+            <img src="images/image-product-3-thumbnail.jpg" alt="image-product-3" class="product-thumbnails__item">
+          </div>
+          <div class="product-thumbnails__cover">
+            <img src="images/image-product-4-thumbnail.jpg" alt="image-product-4" class="product-thumbnails__item">
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-details">
+      <span class="product-details__brand">Sneaker Company</span>
+      <h2 class="product-details__title">Fall Limited Edition <br> Sneakers</h2>
+      <p class="product-details__desc">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <div class="product-price">
+        <span class="product-price__current">$125.00</span>
+        <span class="product-price__discount">50%</span>
+        <span class="product-price__original">$250.00</span>
+      </div>
+      <div class="product-action">
+        <div class="product-amount">
+          <div class="product-amount__btn product-amount__btn--remove" id="remove-amount">
+            <img src="images/icon-minus.svg" alt="icon-minus">
+          </div>
+          <span class="product-amount__total" id="total-amount">0</span>
+          <div class="product-amount__btn product-amount__btn--add" id="add-amount">
+            <img src="images/icon-plus.svg" alt="icon-plus">
+          </div>
+        </div>
+        <button class="btn-primary btn-primary--add" id="btn-add"><img src="images/icon-cart.svg" alt="icon-cart"> Add to cart</button>
+      </div>
+    </article>
+  </section>
+
+  <div class="lightbox-gallery" id="lightbox-gallery">
+    <div class="lightbox-gallery__container">
+      <div class="lightbox-icon">
+        <img src="images/icon-close.svg" alt="icon-close" id="lightbox-icon__close" class="lightbox-icon__close">
+      </div>
+      <div class="slider-container">
+        <div class="slider-content">
+          <div class="slider-images" id="slider-images">
+            <img src="images/image-product-1.jpg" alt="image-product-1" class="slider-images__item">
+            <img src="images/image-product-2.jpg" alt="image-product-3" class="slider-images__item">
+            <img src="images/image-product-3.jpg" alt="image-product-3" class="slider-images__item">
+            <img src="images/image-product-4.jpg" alt="image-product-4" class="slider-images__item">
+          </div>
+        </div>
+
+        <div class="slider-container__btn slider-container__btn--prev" id="lightbox-prev">
+          <img src="images/icon-previous.svg" alt="icon-previous">
+        </div>
+        <div class="slider-container__btn slider-container__btn--next" id="lightbox-next">
+          <img src="images/icon-next.svg" alt="icon-next">
+        </div>
+      </div>
+
+      <div class="gallery-thumbnails">
+        <div class="gallery-thumbnails__cover gallery-thumbnails__cover--actived slide-1">
+          <img src="images/image-product-1-thumbnail.jpg" alt="image-product-1" class="gallery-thumbnails__item product-thumbnails__item--actived">
+        </div>
+        <div class="gallery-thumbnails__cover slide-2">
+          <img src="images/image-product-2-thumbnail.jpg" alt="image-product-2" class="gallery-thumbnails__item">
+        </div>
+        <div class="gallery-thumbnails__cover slide-3">
+          <img src="images/image-product-3-thumbnail.jpg" alt="image-product-3" class="gallery-thumbnails__item">
+        </div>
+        <div class="gallery-thumbnails__cover slide-4">
+          <img src="images/image-product-4-thumbnail.jpg" alt="image-product-4" class="gallery-thumbnails__item">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/index.js"></script>
+</body>
+</html>

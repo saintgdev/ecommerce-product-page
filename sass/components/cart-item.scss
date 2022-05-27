@@ -1,0 +1,38 @@
+.cart-item{
+  display: grid;
+  column-gap: .9em;
+  align-items: center;
+  grid-template-columns: 16% 1fr 13%;
+  color: $dark-grayish-blue;
+  &__title,
+  &__price{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &__price{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    b{
+      margin-left: .3em;
+      color: $very-vark-blue;
+    }
+  }
+  &__img{
+    width: 100%;
+    border-radius: .2em;
+    grid-row: 1/3;
+  }
+  &__icon{
+    grid-row: 1/3;
+    justify-self: flex-end;
+  }
+}
+
+@media (min-width: 1200px){
+  .cart-item{
+    grid-template-columns: 16% 1fr max-content;
+  }
+}
